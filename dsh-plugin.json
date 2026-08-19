@@ -1,0 +1,52 @@
+{
+  "$schema": "https://dsh.community/schemas/dsh-plugin-0.15.json",
+  "id": "io.github.fusu123fusu.dsh-tui-filebrowser",
+  "name": "dsh-tui-filebrowser",
+  "version": "0.1.0",
+  "manifestVersion": "0.15",
+  "facets": {
+    "host": {
+      "entry": "lib/index.js",
+      "apiVersion": "v1alpha1"
+    }
+  },
+  "requires": {
+    "contracts": [
+      {
+        "apiVersion": "commands.dsh/v1alpha1",
+        "kind": "Command"
+      }
+    ]
+  },
+  "permissions": [
+    {
+      "name": "commands.invoke",
+      "scope": "io.github.fusu123fusu.dsh-tui-filebrowser.edit",
+      "reason": "Open the workspace file browser scene (read-only snapshot viewer)"
+    }
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "io.github.fusu123fusu.dsh-tui-filebrowser.edit",
+        "title": "Browse files",
+        "description": "Full-screen snapshot file tree with a read-only preview pane"
+      }
+    ]
+  },
+  "subscriptions": [],
+  "license": "MIT",
+  "source": {
+    "repository": "https://github.com/FUSU123fusu/dsh-tui-filebrowser"
+  },
+  "overrides": [
+    {
+      "target": "x-ccch1mneyyy.tui.scene-components",
+      "kind": "patch",
+      "description": "Registers a TUI-only full-screen scene; panels are not part of Community v0.15. The scene is strictly read-only: it performs no filesystem writes."
+    }
+  ],
+  "compat": {
+    "hosts": ["dsh-tui"]
+  }
+}
