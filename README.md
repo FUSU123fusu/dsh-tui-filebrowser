@@ -1,6 +1,6 @@
 # dsh-tui-filebrowser
 
-dsh-TUI 全屏文件浏览场景：左侧文件树（快照），右侧只读预览，`/edit` 打开。纯只读——插件不执行任何文件写入。推荐在https://github.com/ccch1mneyyy/dsh-TUI使用。
+dsh-TUI 全屏文件浏览场景：左侧文件树（快照），右侧只读预览，`/edit` 打开。纯只读——插件不执行任何文件写入。推荐在[dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI)使用。
 
 ## 浏览
 
